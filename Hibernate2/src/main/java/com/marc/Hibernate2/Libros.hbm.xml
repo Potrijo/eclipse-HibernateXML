@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 4 abr 2022 19:18:24 by Hibernate Tools 5.6.3.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.marc.Hibernate2.Libros" optimistic-lock="none" table="libros">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="com.marc.Hibernate2.Autores" fetch="select" name="autores">
+            <column length="5" name="codautor"/>
+        </many-to-one>
+        <property name="titulo" type="string">
+            <column length="60" name="titulo"/>
+        </property>
+    </class>
+</hibernate-mapping>
